@@ -268,6 +268,45 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.admissions-criteria {
+    padding: var(--space-lg) var(--space-md);
+    display: flex;
+    justify-content: center; /* center the card horizontally */
+}
+
+.criteria-card {
+    display: flex;
+    flex-direction: row; /* side by side on desktop */
+    background-color: #fff; /* card background */
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    gap: var(--space-md);
+}
+
+.card-content {
+    flex: 1;
+    padding: var(--space-md);
+}
+
+.criteria-card img {
+    width: 50%; /* desktop size */
+    object-fit: cover;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .criteria-card {
+        flex-direction: column; /* stack vertically on mobile */
+    }
+
+    .criteria-card img {
+        width: 100%; /* full width */
+        height: auto;
+    }
+}
 
 /* ============================ */
 /* 7. CONTACT FORM              */
@@ -385,4 +424,5 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
